@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+    }
+
+    .icon {
+      /* Initial icon size */
+      font-size: 1.5em; /* Adjusted size to match Gmail */
+      /* Initial icon color */
+      color: #7a7a7a; /* Default gray color */
+      /* Transition for smooth hover effect */
+      transition: all 0.3s ease;
+    }
+
+    /* Enlarge icon on hover */
+    .social:hover .icon {
+      font-size: 2em; /* Enlarged size on hover */
+      color: inherit; /* Show true color on hover */
+    }
+
+    /* Change color of specific icons on hover */
+    .drive:hover {
+      color: #0066ff; /* Google Drive color */
+    }
+
+    .sheets:hover {
+      color: #0f9d58; /* Google Sheets color */
+    }
+
+    .classroom:hover {
+      color: #4285f4; /* Google Classroom color */
+    }
+
+    .grammarly:hover {
+      color: #00b300; /* Grammarly color */
+    }
+
+    .youtube:hover {
+      color: #FF0000; /* YouTube color */
+    }
+
+    .cvsu:hover {
+      color: #ff6347; /* CvSU color */
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .icon-name {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .social:hover .icon-name {
+      opacity: 1;
+    }
+
+    /* Center JP Buduan icon */
+    #youtube {
+      justify-content: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Start Gmail Icon -->
+    <div id="gmail" onclick="navigate('https://mail.google.com/')" class="social">
+      <span class="icon gmail"><img src="https://www.google.com/search?q=google+drive&sca_esv=85af15397c77c0f6&rlz=1C1CHZN_enPH1025PH1025&tbm=isch&sxsrf=ACQVn0__DRoUvdmKrM4yINZS06f_wOTjjQ:1709026387425&source=lnms&sa=X&ved=2ahUKEwj9ve-1m8uEAxW0nmMGHcCiBgUQ_AUoAXoECAEQAw&biw=1536&bih=730&dpr=1.25#imgrc=FC4n2WWV-vmtmM" width="40" height="40"></span>
+      <span class="icon-name">Gmail</span>
+    </div>
+    <!-- End Gmail Icon -->
+
+    <!-- Start Google Drive Icon -->
+    <div id="drive" onclick="navigate('https://drive.google.com/') " class="social">
+      <span class="icon drive"><i class="fab fa-google-drive"></i></span>
+      <span class="icon-name">Google Drive</span>
+    </div>
+    <!-- End Google Drive Icon -->
+
+    <!-- Start Google Sheets Icon -->
+    <div id="sheets" onclick="navigate('https://sheets.google.com/') " class="social">
+      <span class="icon sheets"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Google_Sheets_2020_Logo.svg/1200px-Google_Sheets_2020_Logo.svg.png" width="40" height="40"></span>
+      <span class="icon-name">Google Sheets</span>
+    </div>
+    <!-- End Google Sheets Icon -->
+
+    <!-- Start Google Classroom Icon -->
+    <div id="classroom" onclick="navigate('https://classroom.google.com/') " class="social">
+      <span class="icon classroom"><i class="fab fa-google-classroom"></i></span>
+      <span class="icon-name">Google Classroom</span>
+    </div>
+    <!-- End Google Classroom Icon -->
+
+    <!-- Start Grammarly Icon -->
+    <div id="grammarly" onclick="navigate('https://app.grammarly.com/')" class="social">
+      <span class="icon grammarly"><img src="https://www.mooclab.club/showcase/grammarly.503/cover-image" width="40" height="40"></span>
+      <span class="icon-name">Grammarly</span>
+    </div>
+    <!-- End Grammarly Icon -->
+
+    <!-- Start YouTube Icon -->
+    <div id="youtube" onclick="navigate('https://www.youtube.com/c/JPBuduan')" class="social">
+      <span class="icon youtube"><i class="fab fa-youtube"></i></span>
+      <span class="icon-name" style="text-align: center;">JP Buduan</span>
+    </div>
+    <!-- End YouTube Icon -->
+
+    <!-- Start CvSU Portal Icon -->
+    <div id="cvsu" onclick="navigate('https://trece.cvsu.edu.ph/student/dashboard')" class="social">
+      <span class="icon cvsu"><img src="https://img.freepik.com/vecteurs-premium/creation-logo-ecole-education_586739-4428.jpg?w=2000" width="40" height="40"></span>
+      <span class="icon-name">CvSU Portal</span>
+    </div>
+    <!-- End CvSU Portal Icon -->
+
+  </div>
+
+  <script>
+    function navigate(url) {
+      window.open(url, '_blank').focus();
+    }
+  </script>
+
+</body>
+
+</html>
